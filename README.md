@@ -1,5 +1,5 @@
 # DotnetMvc
-Mvc entity framework sample web application
+C# .NET MVC ile Entity framework CRUD islemleri icin ornek bir web application projesidir.
 
 Eğer northwind db create edilmemişse, asagidaki gibi cmd prompta local db instance i create edilerek connect olunur;
 1) "sqllocaldb" komutunu yaz

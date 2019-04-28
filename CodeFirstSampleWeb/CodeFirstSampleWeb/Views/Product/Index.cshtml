@@ -1,0 +1,128 @@
+﻿@*@model List<EntitiesLayer.Concrete.Product>*@
+@*@model PagedList.IPagedList<EntitiesLayer.Concrete.Product>*@
+@model CodeFirstSampleWeb.Models.ProductModel
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Ürünler";
+}
+
+<h2>Ürünler Örnek Sayfası</h2>
+
+<h4>
+    @Html.ActionLink("Ürün İstatistikleri İçin Tıklayın", "Stats")
+</h4>
+@using (Html.BeginForm("Index", "Product", FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+    <div class="input-group content-group">
+
+        <div class="input-group-btn" style="width:29px;">
+            <div class="btn default blue-stripe"><span class="text-size-large bold">Ürün adına göre ara :</span></div>
+        </div>
+        <div class="input-group-btn" style="width:5px;">
+        </div>
+        <div class="input-group-btn" style="width:275px;">
+            @*@Html.TextBox("Adi", "", new { @placeHolder = "Aranacak ürün adı bilgisini giriniz...", @class = "form-control" })*@
+            @Html.TextBoxFor(model => model.Adi, new { @placeHolder = "Aranacak ürün adı bilgisini giriniz...", @class = "form-control" })
+        </div>
+        <div class="input-group-btn" style="width:5px;">
+        </div>
+        <div class="input-group-btn">
+            <input class="btn blue-stripe pull-right btn-circle dark-stripe" type="submit" value="Ürün Ara" class="btn btn-default" />
+        </div>
+
+        <div class="has-feedback has-feedback-right">
+        </div>
+
+    </div>
+
+}
+
+<p>
+    @Html.ActionLink("Yeni Ürün Ekle", "Create")
+</p>
+<table class="table">
+    @if (Model != null)
+    {
+        var dummy = Model.PagedList.FirstOrDefault();
+        <tr>
+            <th>
+                @Html.ActionLink(Html.DisplayNameFor(model => dummy.ProductName).ToHtmlString(), "Index",
+                             new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => dummy.QuantityPerUnit)
+            </th>
+            <th>
+                @Html.ActionLink(Html.DisplayNameFor(model => dummy.UnitPrice).ToHtmlString(), "Index",
+                             new { sortOrder = ViewBag.PriceSortParm, currentFilter = ViewBag.CurrentFilter })
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => dummy.UnitsInStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => dummy.UnitsOnOrder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => dummy.ReorderLevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => dummy.Discontinued)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => dummy.Category.CategoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => dummy.Supplier.CompanyName)
+            </th>
+            <th></th>
+        </tr>
+
+        foreach (var item in Model.PagedList)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuantityPerUnit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitsInStock)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitsOnOrder)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReorderLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Discontinued)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                    </td>
+                    <td>
+                        @Html.ActionLink(Html.DisplayFor(modelItem => item.Supplier.CompanyName).ToHtmlString(),
+                            "Details", "Suppliers", new { id = item.Supplier.SupplierID }, null)
+                    </td>*@
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
+                </td>
+            </tr>
+        }
+    }
+
+</table>
+<br />
+Page @(Model.PagedList.PageCount < Model.PagedList.PageNumber ? 0 : Model.PagedList.PageNumber) of @Model.PagedList.PageCount
+
+@Html.PagedListPager(Model.PagedList, page => Url.Action("Index",
+    new {page, pAdi = Model.Adi }))
+

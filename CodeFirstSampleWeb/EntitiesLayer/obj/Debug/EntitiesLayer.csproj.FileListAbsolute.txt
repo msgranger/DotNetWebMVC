@@ -1,0 +1,12 @@
+E:\Projects\CodeFirst\CodeFirstSampleWeb\EntitiesLayer\bin\Debug\EntitiesLayer.dll.config
+E:\Projects\CodeFirst\CodeFirstSampleWeb\EntitiesLayer\bin\Debug\EntitiesLayer.dll
+E:\Projects\CodeFirst\CodeFirstSampleWeb\EntitiesLayer\bin\Debug\EntitiesLayer.pdb
+E:\Projects\CodeFirst\CodeFirstSampleWeb\EntitiesLayer\bin\Debug\EntityFramework.dll
+E:\Projects\CodeFirst\CodeFirstSampleWeb\EntitiesLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projects\CodeFirst\CodeFirstSampleWeb\EntitiesLayer\bin\Debug\EntityFramework.xml
+E:\Projects\CodeFirst\CodeFirstSampleWeb\EntitiesLayer\bin\Debug\EntityFramework.SqlServer.xml
+E:\Projects\CodeFirst\CodeFirstSampleWeb\EntitiesLayer\obj\Debug\EntitiesLayer.csproj.CoreCompileInputs.cache
+E:\Projects\CodeFirst\CodeFirstSampleWeb\EntitiesLayer\obj\Debug\EntitiesLayer.csproj.CopyComplete
+E:\Projects\CodeFirst\CodeFirstSampleWeb\EntitiesLayer\obj\Debug\EntitiesLayer.dll
+E:\Projects\CodeFirst\CodeFirstSampleWeb\EntitiesLayer\obj\Debug\EntitiesLayer.pdb
+E:\Projects\CodeFirst\CodeFirstSampleWeb\EntitiesLayer\obj\Debug\EntitiesLayer.csprojAssemblyReference.cache

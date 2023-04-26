@@ -22,10 +22,8 @@ jobs:
     - name: Navigate to Workspace
       run: cd $GITHUB_WORKSPACE
 
-    - name: Navigate to the Solution folder
-      run: cd CodeFirstSampleWeb
-
     - name: Create Build Directory
+      working-directory: ./CodeFirstSampleWeb
       run: mkdir _build
       
     - name: Restore Packages

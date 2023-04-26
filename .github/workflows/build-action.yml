@@ -6,6 +6,9 @@ on:
 
 jobs:
   build:
+    defaults:
+          run:
+            working-directory: CodeFirstSampleWeb
     runs-on: windows-latest
 
     steps:
@@ -17,13 +20,7 @@ jobs:
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1
       with:
-        nuget-version: 'latest'
-      
-    - name: Navigate to Workspace
-      run: cd $GITHUB_WORKSPACE
-
-    - name: Navigate to project
-      run: cd ./CodeFirstSampleWeb
+        nuget-version: 'latest'   
 
     - name: Print
       run: ls

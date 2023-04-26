@@ -1,0 +1,12 @@
+D:\a\DotNetWebMVC\DotNetWebMVC\CodeFirstSampleWeb\EntitiesLayer\bin\Release\EntitiesLayer.dll.config
+D:\a\DotNetWebMVC\DotNetWebMVC\CodeFirstSampleWeb\EntitiesLayer\bin\Release\EntitiesLayer.dll
+D:\a\DotNetWebMVC\DotNetWebMVC\CodeFirstSampleWeb\EntitiesLayer\bin\Release\EntitiesLayer.pdb
+D:\a\DotNetWebMVC\DotNetWebMVC\CodeFirstSampleWeb\EntitiesLayer\bin\Release\EntityFramework.dll
+D:\a\DotNetWebMVC\DotNetWebMVC\CodeFirstSampleWeb\EntitiesLayer\bin\Release\EntityFramework.SqlServer.dll
+D:\a\DotNetWebMVC\DotNetWebMVC\CodeFirstSampleWeb\EntitiesLayer\bin\Release\EntityFramework.xml
+D:\a\DotNetWebMVC\DotNetWebMVC\CodeFirstSampleWeb\EntitiesLayer\bin\Release\EntityFramework.SqlServer.xml
+D:\a\DotNetWebMVC\DotNetWebMVC\CodeFirstSampleWeb\EntitiesLayer\obj\Release\EntitiesLayer.csproj.AssemblyReference.cache
+D:\a\DotNetWebMVC\DotNetWebMVC\CodeFirstSampleWeb\EntitiesLayer\obj\Release\EntitiesLayer.csproj.CoreCompileInputs.cache
+D:\a\DotNetWebMVC\DotNetWebMVC\CodeFirstSampleWeb\EntitiesLayer\obj\Release\EntitiesLayer.csproj.CopyComplete
+D:\a\DotNetWebMVC\DotNetWebMVC\CodeFirstSampleWeb\EntitiesLayer\obj\Release\EntitiesLayer.dll
+D:\a\DotNetWebMVC\DotNetWebMVC\CodeFirstSampleWeb\EntitiesLayer\obj\Release\EntitiesLayer.pdb

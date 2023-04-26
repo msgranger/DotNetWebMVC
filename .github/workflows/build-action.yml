@@ -33,4 +33,13 @@ jobs:
     - name: Build Solution
       run: |
         msbuild.exe CodeFirstSampleWeb.sln /nologo /nr:false /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release" /p:PublishUrl="../_build"
-      
+
+    - name: commit and push
+      run: |
+            git config --global user.name 'Shreelakshmi G'
+            git config --global user.email 'msgranger@users.noreply.github.com'
+            git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+            git checkout "${GITHUB_REF:11}"
+            git add -A
+            git commit -am "Automated build on push"
+            git push 

@@ -23,7 +23,9 @@ jobs:
         nuget-version: 'latest'  
 
     - name: Create Build Directory
-      run: mkdir _build
+      run: |
+            mkdir _build
+            ls
       
     - name: Restore Packages
       run: nuget restore CodeFirstSampleWeb.sln

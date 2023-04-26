@@ -38,8 +38,6 @@ jobs:
       run: |
             git config --global user.name 'Shreelakshmi G'
             git config --global user.email 'msgranger@users.noreply.github.com'
-            git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-            git checkout "${GITHUB_REF:11}"
             git add -A
-            git commit -am "Automated build on push"
+            git commit -m "Automated build on push"
             git push 

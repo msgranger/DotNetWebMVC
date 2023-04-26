@@ -23,7 +23,7 @@ jobs:
       run: cd $GITHUB_WORKSPACE
 
     - name: Navigate to project
-      run: cd CodeFirstSampleWeb
+      run: cd ./CodeFirstSampleWeb
 
     - name: Print
       run: ls

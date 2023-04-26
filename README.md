@@ -13,4 +13,4 @@ Not : Eger roslyn veya csc.exe not found gibi bir hata alirsaniz, Package Manage
 
 "update-package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r"
 
-added build.yml
+added build-action.yml
